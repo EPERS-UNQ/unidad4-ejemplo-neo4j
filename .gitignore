@@ -1,0 +1,13 @@
+[24;1HError detected while processing /usr/share/vim/vimrc:
+line    1:
+Interrupted
+Error detected while processing /Users/cf/.vimrc:
+line    1:
+Interrupted
+Interrupt: Press ENTER or type command to continue[m[m[0m[H[2J[24;1H".classpath" 26L, 998C[1;1H<?xml version="1.0" encoding="UTF-8"?>
+<classpath>[3;8H <classpathentry kind="src" output="target/classes" path="src/main/java">[4;16H <attributes>[5;24H <attribute name="optional" value="true"/>[6;24H <attribute name="maven.pomderived" value="true"/>[7;16H </attributes>[8;8H </classpathentry>[9;8H <classpathentry kind="src" output="target/test-classes" path="src/test/java">[10;16H <attributes>[11;24H <attribute name="optional" value="true"/>[12;24H <attribute name="maven.pomderived" value="true"/>[13;16H </attributes>[14;8H </classpathentry>[15;8H <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.Standar[16;1HdVMType/JavaSE-1.8">[17;16H <attributes>[18;24H <attribute name="maven.pomderived" value="true"/>[19;16H </attributes>[20;8H </classpathentry>[21;8H <classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">[22;16H <attributes>[23;24H <attribute name="maven.pomderived" value="true"/>[1;1H[24;1HType  :quit<Enter>  to exit Vim[1;1H[24;1H[K[24;1H:q[24;1H[K[24;1H.classpath
+.project
+.settings
+/bin
+/target
+.classpath
