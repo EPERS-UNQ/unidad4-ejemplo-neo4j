@@ -14,16 +14,16 @@ public class PersonaNeo4jDAOTest {
 	private PersonaNeo4jDAO dao;
 	
 	@Before
-	public void prepare() {
+	public void setUp() {
 		this.dao = new PersonaNeo4jDAO();
 	}
 	
 	@Test
 	public void crearPersona() {
-		Persona persona = new Persona("300000", "Claudio", "Fernandez");
+		Persona persona = new Persona("300000", "Jerry", "Smith");
 		this.dao.create(persona);
 		
-		Persona persona2 = new Persona("300001", "Nico", "Fernandez");
+		Persona persona2 = new Persona("300001", "Morty", "Smith");
 		this.dao.create(persona2);
 		
 		this.dao.crearRelacionEsHijoDe(persona, persona2);
@@ -31,13 +31,13 @@ public class PersonaNeo4jDAOTest {
 	
 	@Test
 	public void hijosDe() {
-		Persona persona = new Persona("300000", "Claudio", "Fernandez");
+		Persona persona = new Persona("300000", "Jerry", "Smith");
 		this.dao.create(persona);
-		
-		Persona persona2 = new Persona("300001", "Nico", "Fernandez");
+
+		Persona persona2 = new Persona("300001", "Morty", "Smith");
 		this.dao.create(persona2);
 		
-		Persona persona3 = new Persona("300002", "Camila", "Fernandez");
+		Persona persona3 = new Persona("300002", "Summer", "Smith");
 		this.dao.create(persona3);
 		
 		this.dao.crearRelacionEsHijoDe(persona, persona2);

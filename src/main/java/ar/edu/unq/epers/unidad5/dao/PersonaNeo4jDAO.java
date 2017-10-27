@@ -13,7 +13,7 @@ import org.neo4j.driver.v1.Values;
 import ar.edu.unq.epers.unidad5.model.Persona;
 
 /**
- * FamiliaDAO encapsula el acceso a Neo4j
+ * PersonaNeo4jDAO encapsula el acceso a Neo4j
  * 
  * @author cf
  */
@@ -22,7 +22,7 @@ public class PersonaNeo4jDAO {
 	private Driver driver;
 
 	public PersonaNeo4jDAO() {
-		this.driver = GraphDatabase.driver( "bolt://localhost", AuthTokens.basic( "neo4j", "1234" ) );
+		this.driver = GraphDatabase.driver( "bolt://localhost:7687", AuthTokens.basic( "neo4j", "password" ) );
 	}
 
 	public void create(Persona persona) {
