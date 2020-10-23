@@ -29,9 +29,9 @@ jobs:
       - name: Run tests
         run: ./gradlew test -i
         env:
-          USER: ${{ secrets.USER }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          URL: ${{ secrets.URL }}
+          NEO_USER: ${{ secrets.NEO_USER }}
+          NEO_PASSWORD: ${{ secrets.NEO_PASSWORD }}
+          NEO_URL: ${{ secrets.NEO_URL }}
       - name: Success notification
         if: success()
         env:

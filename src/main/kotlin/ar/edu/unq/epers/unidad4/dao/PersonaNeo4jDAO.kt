@@ -11,9 +11,9 @@ class PersonaNeo4jDAO {
 
     init {
         val env = System.getenv()
-        val url = env.getOrDefault("URL", "bolt://localhost:7687")
-        val username = env.getOrDefault("USERe", "neo4j")
-        val password = env.getOrDefault("PASSWORD", "root")
+        val url = env.getOrDefault("NEO_URL", "bolt://localhost:7687")
+        val username = env.getOrDefault("NEO_USER", "neo4j")
+        val password = env.getOrDefault("NEO_PASSWORD", "root")
 
         driver = GraphDatabase.driver(url, AuthTokens.basic(username, password),
             Config.builder().withLogging(Logging.slf4j()).build()
@@ -22,6 +22,7 @@ class PersonaNeo4jDAO {
 
     fun create(persona: Persona) {
         driver.session().use { session ->
+
             session.writeTransaction {
                 val query = "MERGE (n:Persona {dni: ${'$'}elDni, name:  ${'$'}elNombre, surname: ${'$'}elApellido })"
                 it.run(query, Values.parameters(
