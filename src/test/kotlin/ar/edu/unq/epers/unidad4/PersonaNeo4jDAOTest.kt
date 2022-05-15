@@ -6,8 +6,8 @@ import org.junit.jupiter.api.*
 import org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS
 
 // Anotaciones e Imports de Spring: Descomentar para ver los test correr con Spring.
-// Los dejamos aqui a modo de ejemplo. No hacen falta utilizarlos
-// por que en el ejemplo estamos usando el driver directamente sin auditoria de Spring de por medio.
+// Los dejamos aca a modo de ejemplo. No hacen falta utilizarlos,
+// ya que en el ejemplo estamos usando el driver directamente sin auditoria de Spring en su persistencia.
 
 //import org.junit.jupiter.api.extension.ExtendWith
 //import org.springframework.boot.test.context.SpringBootTest
