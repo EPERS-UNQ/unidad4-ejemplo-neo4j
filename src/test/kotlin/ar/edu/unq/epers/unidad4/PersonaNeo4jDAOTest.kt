@@ -2,20 +2,29 @@ package ar.edu.unq.epers.unidad4
 
 import ar.edu.unq.epers.unidad4.dao.PersonaNeo4jDAO
 import ar.edu.unq.epers.unidad4.model.Persona
-import org.junit.After
-import org.junit.Assert
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.*
+import org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS
 
+// Anotaciones e Imports de Spring: Descomentar para ver los test correr con Spring.
+// Los dejamos aqui a modo de ejemplo. No hacen falta utilizarlos
+// por que en el ejemplo estamos usando el driver directamente sin auditoria de Spring de por medio.
+
+//import org.junit.jupiter.api.extension.ExtendWith
+//import org.springframework.boot.test.context.SpringBootTest
+//import org.springframework.test.context.junit.jupiter.SpringExtension
+
+//@ExtendWith(SpringExtension::class)
+//@SpringBootTest
+@TestInstance(PER_CLASS)
 class PersonaNeo4jDAOTest {
     lateinit var dao: PersonaNeo4jDAO
 
-    @Before
+    @BeforeEach
     fun setUp() {
         dao = PersonaNeo4jDAO()
     }
 
-    @After
+    @AfterEach
     fun after() {
         dao.clear()
     }
@@ -46,8 +55,8 @@ class PersonaNeo4jDAOTest {
 
         val hijos = dao.getHijosDe(jerry)
 
-        Assert.assertEquals(2, hijos.size.toLong())
-        Assert.assertTrue(hijos.contains(morty))
-        Assert.assertTrue(hijos.contains(summer))
+        Assertions.assertEquals(2, hijos.size.toLong())
+        Assertions.assertTrue(hijos.contains(morty))
+        Assertions.assertTrue(hijos.contains(summer))
     }
 }
